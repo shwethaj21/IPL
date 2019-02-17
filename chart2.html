@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+      text: "Extra runs conceded per team in 2016"
+      },
+
+      axisX: {
+        valueFormatString: "YYY",
+        interval:1,
+        intervalType: "year"
+      },
+
+      data: [
+      {
+        type: "column",
+        
+        dataPoints: [
+        {y: 108, label: 'Rising Pune Supergiants' },
+        { y: 102,label:'Mumbai Indians'},
+        { y: 122 ,label:'Kolkata Knight Riders'},
+        { y: 106 ,label:'Delhi Daredevils'},
+        { y: 98 ,label:'Gujarat Lions'},
+        { y: 100 ,label: 'Kings XI Punjab'},
+        { y: 107 ,label:'Sunrisers Hyderabad'},
+        { y: 156 ,label:'Royal Challengers Bangalore'}
+        ]
+      },
+
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+ <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script></head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+</body>
+</html>
